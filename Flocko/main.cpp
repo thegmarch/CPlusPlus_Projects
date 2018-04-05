@@ -29,14 +29,6 @@ int main(){
 	Robin r1;
 	Crow c1;
 
-	/*
-	cout << "Hawk Stuffff" << endl;
-	cout << h1;
-	cout << "Penguin One Characteristics: " << endl;
-	cout << b1.hopDisGetter() << " " << b1.flyDisGetter() << endl;
-*/
-	//cout << "Penguin Two Characteristics: " << endl;
-	//cout << b2.hopDisGetter() << " " << b2.flyDisGetter() << endl;
 
 	squad.push_back(new Penguin);
 	squad.push_back(new Robin);
@@ -48,17 +40,17 @@ int main(){
 	squad[3] = &c1;
 	cout << "Peep Squad: " << endl;
 
-	cout << "This is the first movement in the world" << endl;
+	cout << "First round of movement in the world" << endl;
 	//Movement In world given current world attributes
 	for(auto& i: squad)
 	{
 		//cout << i.hopDisGetter() << " " << i.flyDisGetter() << endl;
 		 i->moveInWorld();
 	}
+	
 	//Print results
 	for(auto& i: squad)
 	{
-		//cout << i.hopDisGetter() << " " << i.flyDisGetter() << endl;
 		 cout << *i << endl;
 	}
 
@@ -66,7 +58,7 @@ int main(){
 	World::worldTemp = -10;
 	World::worldWind = 30;
 
-	cout << "This is the Second movement in the world" << endl;
+	cout << "Second round of movement in the world" << endl;
 	for(auto& i: squad)
 	{
 		//cout << i.hopDisGetter() << " " << i.flyDisGetter() << endl;
@@ -76,7 +68,6 @@ int main(){
 	//Print results
 	for(auto& i: squad)
 	{
-		//cout << i.hopDisGetter() << " " << i.flyDisGetter() << endl;
 		 cout << *i << endl;
 	}
 
