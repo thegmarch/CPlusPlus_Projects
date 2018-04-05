@@ -62,7 +62,7 @@ int main(){
 		 cout << *i << endl;
 	}
 
-	//Storm approaches
+	//World Change
 	World::worldTemp = -10;
 	World::worldWind = 30;
 
