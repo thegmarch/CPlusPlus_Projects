@@ -123,16 +123,27 @@ ostream& Penguin::printFunc(ostream &os) const
 			"Total Distance Traveled: " << disTraveled <<'\n';
 }
 
+/*
+ * Peguin hop distance getter
+ */
 int Penguin::hopDisGetter()
 {
 	return hopDis;
 }
 
+
+/*
+ * Peguin fly distance getter
+ */
 int Penguin::flyDisGetter()
 {
 	return flyDis;
 }
 
+
+/*
+ * Peguin movement method
+ */
 void Penguin::moveInWorld()
 {
 	disTraveled += hopDisGetter();
@@ -162,11 +173,18 @@ ostream& Hawk::printFunc(ostream &os) const
 			"Total Distance Traveled: " << disTraveled <<'\n';
 }
 
+/*
+ * Hawk hop distance getter
+ */
 int Hawk::hopDisGetter()
 {
 	return 0;
 }
 
+
+/*
+ * Hawk fly distance getter
+ */
 int Hawk::flyDisGetter()
 {
 	if(World::worldWind <= 40)
@@ -177,6 +195,9 @@ int Hawk::flyDisGetter()
 		return 0;
 }
 
+/*
+ * Hawk movement method
+ */
 void Hawk::moveInWorld()
 {
 	disTraveled += hopDisGetter();
@@ -207,6 +228,10 @@ ostream& Robin::printFunc(ostream &os) const
 			"Total Distance Traveled: " << disTraveled <<'\n';
 }
 
+
+/*
+ * Robin hop distance getter
+ */
 int Robin::hopDisGetter()
 {
 	if(World::worldTemp >= 0)
@@ -217,6 +242,11 @@ int Robin::hopDisGetter()
 		return 0;
 }
 
+
+
+/*
+ * Robin fly distance getter
+ */
 int Robin::flyDisGetter()
 {
 	if(World::worldWind <= 20)
@@ -227,6 +257,11 @@ int Robin::flyDisGetter()
 		return 0;
 }
 
+
+
+/*
+ * Robin movement method
+ */
 void Robin::moveInWorld()
 {
 	disTraveled += hopDisGetter();
@@ -258,6 +293,9 @@ ostream& Crow::printFunc(ostream &os) const
 			"Total Distance Traveled: " << disTraveled <<'\n';
 }
 
+/*
+ * Crow hop distance getter
+ */
 int Crow::hopDisGetter()
 {
 	if(World::worldTemp >= 0)
@@ -268,6 +306,9 @@ int Crow::hopDisGetter()
 		return 0;
 }
 
+/*
+ * Crow fly distance getter
+ */
 int Crow::flyDisGetter()
 {
 	if(World::worldWind <= 25)
@@ -278,6 +319,9 @@ int Crow::flyDisGetter()
 		return 0;
 }
 
+/*
+ * Crow movement method
+ */
 void Crow::moveInWorld()
 {
 	disTraveled += hopDisGetter();
