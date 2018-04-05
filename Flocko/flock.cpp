@@ -34,7 +34,6 @@ Bird::Bird(const Bird& source)
 	hopDis = source.hopDis;
 	flyDis = source.flyDis;
 	disTraveled = source.disTraveled;
-	cout << "base class copy constructor" << endl;
 }
 
 /*
@@ -102,7 +101,7 @@ void Bird::moveInWorld()
 }
 
 /*////////////////////////////////////////////////
-				Penguin Class: Derived from Bird
+	Penguin Class: Derived from Bird
 ////////////////////////////////////////////////*/
 /*
  * Constructor for Bird Class
@@ -152,7 +151,7 @@ void Penguin::moveInWorld()
 
 
 /*////////////////////////////////////////////////
-		Hawk Class: Derived from Bird
+	Hawk Class: Derived from Bird
 ////////////////////////////////////////////////*/
 /*
  * Default Constructor
@@ -206,7 +205,7 @@ void Hawk::moveInWorld()
 
 
 /*////////////////////////////////////////////////
-		Robin Class: Derived from Bird
+	Robin Class: Derived from Bird
 ////////////////////////////////////////////////*/
 
 /*
@@ -228,7 +227,6 @@ ostream& Robin::printFunc(ostream &os) const
 			"Total Distance Traveled: " << disTraveled <<'\n';
 }
 
-
 /*
  * Robin hop distance getter
  */
@@ -241,8 +239,6 @@ int Robin::hopDisGetter()
 	else
 		return 0;
 }
-
-
 
 /*
  * Robin fly distance getter
@@ -257,8 +253,6 @@ int Robin::flyDisGetter()
 		return 0;
 }
 
-
-
 /*
  * Robin movement method
  */
@@ -268,11 +262,9 @@ void Robin::moveInWorld()
 	disTraveled += flyDisGetter();
 }
 
-
 /*////////////////////////////////////////////////
-		Crow Class: Derived from Bird
+	Crow Class: Derived from Bird
 ////////////////////////////////////////////////*/
-
 
 /*
  * Crow Default Constructor
