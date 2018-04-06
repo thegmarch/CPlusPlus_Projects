@@ -45,7 +45,9 @@ int main(){
 	//int mcount;
 	//Read dictionary data from file into vector
 	vector<string> dictionary;
-
+	vector<string> potWords;
+	unordered_map<char, int> letFreq;
+	
 	while(File >> word)
 	{
 		dictionary.push_back(word);
@@ -80,8 +82,7 @@ int main(){
 				invalidLicensePlateFound = false;
 		}
 	}
-vector<string> potWords;
-unordered_map<char, int> letFreq;
+
 	cout << plateChars << endl;
 	for(auto &z: plateChars)
 	{
