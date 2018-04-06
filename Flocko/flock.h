@@ -83,7 +83,6 @@ class Hawk: public Bird{
 	public:
 		Hawk(); //Default Constructor
 		~Hawk(); // Default Destructor
-	//	friend ostream &operator<<(ostream &os, const Bird source); // Overload Insertion Op
 
 		//World Interaction
 		void moveInWorld();
