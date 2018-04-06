@@ -1,1 +1,4 @@
 
+This program takes as input a string that contains 6-8 characters.
+Then, extracts the characters from the string and computes the frequency of each char and returns the shortest word from 
+the nltk corpus that contains at least as many characters as computed.
