@@ -58,14 +58,7 @@ int main(){
 	{
 		dictionary.push_back(word);
 	}
-/*
-	for(auto &i: dictionary)
-	{
-		cout << i << endl;
-		count++;
-	}
-	cout << count << endl;
-*/
+
 	while(invalidLicensePlateFound)
 	{
 
@@ -73,14 +66,13 @@ int main(){
 		cin >> inputLicensePlate;
 		count = inputLicensePlate.length();
 		cout << count << endl;
-		//regex_match(inputLicensePlate,m,letter);
+		//regex_match(inputLicensePlate,m,letter); // playing around with regex
 		//mcount = m.size();
 		//cout << m.length() << endl;
 		
 		// Accept strings that are 6 to 8 characters in length
 		if((count >= 6 && count <= 8))
 		{
-		//	cout << "valid string" << endl;
 			for(auto &i: inputLicensePlate)
 				{
 					if(isalpha(i))
@@ -96,11 +88,7 @@ int main(){
 	{
 		letFreq[z]++;
 	}
-/*	for(auto &z: plateChars)
-	{
-		cout << letFreq[z] << endl;
-	}
-	*/
+	
 	bool checkCharInWord = false;
 	
 	//For each word in dictionary check if there is a letter frequency match
@@ -127,11 +115,7 @@ int main(){
 	}
 
 	int pcount = 0;
-	/*for(auto &y: potWords)
-	{
-		cout << y << endl;
-		pcount++;
-	}*/
+	
 	cout << pcount << endl;
 	sort(potWords.begin(), potWords.end(),compLen);
 	cout << potWords[0];
