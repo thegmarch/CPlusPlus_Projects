@@ -22,18 +22,22 @@ int main(){
 	World::worldWind = 12;
 	cout << World::worldTemp << ' ' << World::worldWind << endl;
 
+	//Create vector containing birds
 	vector<Bird*> squad;
 
+	//Instantiate bird objects
 	Penguin b1;
 	Hawk h1;
 	Robin r1;
 	Crow c1;
 
-
+	//Push pointer to specific object into vector for assignment
 	squad.push_back(new Penguin);
 	squad.push_back(new Robin);
 	squad.push_back(new Hawk);
 	squad.push_back(new Crow);
+	
+	//Assign instantiated object's location in memory to associated pointer in bird vector for future manipulation
 	squad[0] = &b1;
 	squad[1] = &r1;
 	squad[2] = &h1;
@@ -44,7 +48,6 @@ int main(){
 	//Movement In world given current world attributes
 	for(auto& i: squad)
 	{
-		//cout << i.hopDisGetter() << " " << i.flyDisGetter() << endl;
 		 i->moveInWorld();
 	}
 	
@@ -59,6 +62,7 @@ int main(){
 	World::worldWind = 30;
 
 	cout << "Second round of movement in the world" << endl;
+	
 	for(auto& i: squad)
 	{
 		//cout << i.hopDisGetter() << " " << i.flyDisGetter() << endl;
@@ -71,12 +75,12 @@ int main(){
 		 cout << *i << endl;
 	}
 
-
+	//Clean up pointers stored in bird vector
 	for(unsigned int i = 0; i < squad.size(); ++i)
 	{
 		delete squad[i];
 	}
-	squad.clear();
+	squad.clear(); // clear elements in vector
 	cout << squad.size();
 	//return 0;
 }
