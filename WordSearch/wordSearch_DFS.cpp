@@ -66,8 +66,7 @@ class PuzzleSolver
         return wordCount;
     }
 
-    //DFS helper function
-    //
+    
     string reverseCords(string origCord)
     {
         stack<char> stackEven;
@@ -101,6 +100,8 @@ class PuzzleSolver
 
         return cordRev;
     }
+    
+    //DFS helper function
     void helper(char **puzzle, bool **visited, int rowCount, int colCount, int rowPos, int colPos, string &str, unordered_map<string,bool> &found, vector<int> rowCol)
     {
      visited[rowPos][colPos] = true;
@@ -171,6 +172,7 @@ class PuzzleSolver
 
     }
 
+    //Check if string is horizontal
     bool checkHoriz(vector<int> rowCol)
     {
         bool rowMatch = true;
@@ -186,6 +188,7 @@ class PuzzleSolver
         return rowMatch;
     }
 
+    //Check if string is vertical
     bool checkVert(vector<int> rowCol)
     {
         bool vertMatch = true;
@@ -204,6 +207,7 @@ class PuzzleSolver
         return vertMatch;
     }
 
+    //Check if string is diagonal
     bool checkDiag(vector<int> rowCol)
     {
         if(checkDiagLR(rowCol) || checkDiagRL(rowCol))
@@ -212,6 +216,8 @@ class PuzzleSolver
             return false;
     }
 
+    //checkDiag helper function
+    //Checks if string is diagonal, oriented from left to right 
     bool checkDiagLR(vector<int> rowCol)
     {
        if(checkDiagLR_Down(rowCol) || checkDiagLR_UP(rowCol))
@@ -220,6 +226,8 @@ class PuzzleSolver
             return false;
     }
 
+    //checkDiagLR helper function
+    //Checks if string is diagonal with starting character in top left position
     bool checkDiagLR_Down(vector<int> rowCol)
     {
         bool diagMatchDown = true;
@@ -237,6 +245,8 @@ class PuzzleSolver
        return diagMatchDown;
     }
 
+    //checkDiagLR helper function
+    //Checks if string is diagonal with starting character in bottom right position
     bool checkDiagLR_UP(vector<int> rowCol)
     {
         bool diagMatchUp = true;
@@ -254,6 +264,8 @@ class PuzzleSolver
         return diagMatchUp;
     }
 
+    //checkDiag helper function
+    //Checks if string is diagonal, oriented from right to left 
     bool checkDiagRL(vector<int> rowCol)
     {
         if(checkDiagRL_Down(rowCol) || checkDiagRL_Up(rowCol))
@@ -262,6 +274,8 @@ class PuzzleSolver
             return false;
     }
 
+    //checkDiagRL helper function
+    //Checks if string is diagonal with starting character in top right position
     bool checkDiagRL_Down(vector<int> rowCol)
     {
         bool diagMatchDown = true;
@@ -281,6 +295,8 @@ class PuzzleSolver
         return diagMatchDown;
     }
 
+    //checkDiagRL helper function
+    //Checks if string is diagonal with starting character in bottom left position
     bool checkDiagRL_Up(vector<int> rowCol)
     {
         bool diagMatchUp = true;
